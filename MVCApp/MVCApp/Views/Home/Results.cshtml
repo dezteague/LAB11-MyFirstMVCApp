@@ -1,4 +1,7 @@
-﻿<DOCTYPE html>
+﻿@model List<MVCApp.Models.TimePerson>
+
+
+<DOCTYPE html>
 <html>
 <head>
     <title>Results</title>
@@ -6,5 +9,11 @@
 </head>
 <body>
     <h1>Results of numbers</h1>
+
+    @foreach (var item in Model)
+    {
+        <h3>item.Name</h3>
+        <h4>item.Category</h4>
+    }
 </body>
 </html>

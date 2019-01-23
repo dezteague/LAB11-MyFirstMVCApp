@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MVCApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,14 +18,15 @@ namespace MVCApp.Controllers
         [HttpPost]
         public IActionResult Index(int firstNumber, int secondNumber)
         {
-            return RedirectToAction("Results", new { firstNumber, secondNumber };);
+            return RedirectToAction("Results", new { firstNumber, secondNumber });
         }
 
         [HttpGet]
         public IActionResult Results(int firstNumber, int secondNumber)
         {
+            
             //do something with the number
-            return View();
+            return View(TimePerson.GetPersons(firstNumber, secondNumber));
         }
         
     }

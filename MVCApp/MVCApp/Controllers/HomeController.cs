@@ -13,5 +13,19 @@ namespace MVCApp.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Index(int firstNumber, int secondNumber)
+        {
+            return RedirectToAction("Results", new { firstNumber, secondNumber };);
+        }
+
+        [HttpGet]
+        public IActionResult Results(int firstNumber, int secondNumber)
+        {
+            //do something with the number
+            return View();
+        }
+        
     }
 }

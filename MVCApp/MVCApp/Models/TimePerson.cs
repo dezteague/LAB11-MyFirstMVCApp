@@ -39,7 +39,7 @@ namespace MVCApp.Models
                 {
                     string[] field = item.Split(',');
                     TimePerson tp = new TimePerson();
-                    tp.Year =(field[0]==""?0:Convert.ToInt32(field[0][0]));
+                    tp.Year =(field[0]==""?0:Convert.ToInt32(field[0]));
                     tp.Honor = field[1];
                     tp.Name = field[2];
                     tp.Country = field[3];

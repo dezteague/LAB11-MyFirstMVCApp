@@ -1,6 +1,4 @@
 ﻿@model List<MVCApp.Models.TimePerson>
-
-
 <DOCTYPE html>
 <html>
 <head>
@@ -9,18 +7,34 @@
 </head>
 <body>
     <h1>Results</h1>
-
-    @foreach (var item in Model)
-    {
-        <h2>item.Year</h2>
-        <h2>item.Honor</h2>
-        <h2>item.Name</h2>
-        <h2>item.Country</h2>
-        <h2>item.BirthYear</h2>
-        <h2>item.DeathYear</h2>
-        <h2>item.Title</h2>
-        <h2>item.Category</h2>
-        <h2>item.Context</h2>
-    }
+    <table>
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Honor</th>
+                <th>Name</th>
+                <th>Country</th>
+                <th>BirthYear</th>
+                <th>DeathYear</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Context</th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Year</td>
+                <td>@item.Honor</td>
+                <td>@item.Name</td>
+                <td>@item.Country</td>
+                <td>@item.BirthYear</td>
+                <td>@item.DeathYear</td>
+                <td>@item.Title</td>
+                <td>@item.Category</td>
+                <td>@item.Context</td>
+            </tr>
+        }
+    </table>
 </body>
 </html>

@@ -16,17 +16,17 @@ namespace MVCApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(int firstNumber, int secondNumber)
+        public IActionResult Index(int startYear, int endYear)
         {
-            return RedirectToAction("Results", new { firstNumber, secondNumber });
+            return RedirectToAction("Results", new { startYear, endYear });
         }
 
         [HttpGet]
-        public IActionResult Results(int firstNumber, int secondNumber)
+        public IActionResult Results(int startYear, int endYear)
         {
             
             //do something with the number
-            return View(TimePerson.GetPersons(firstNumber, secondNumber));
+            return View(TimePerson.GetPersons(startYear, endYear));
         }
         
     }

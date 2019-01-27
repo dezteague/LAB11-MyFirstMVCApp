@@ -19,6 +19,12 @@ namespace MVCApp.Models
         public string Category { get; set; }
         public string Context { get; set; }
 
+        /// <summary>
+        /// Takes in form input and returns a list of people within the startYear and endYear
+        /// </summary>
+        /// <param name="startYear">int</param>
+        /// <param name="endYear">int</param>
+        /// <returns>List\<TimePerson\></returns>
         public static List<TimePerson> GetPersons(int startYear, int endYear)
         {
             List<TimePerson> people = new List<TimePerson>();
